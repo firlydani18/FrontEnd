@@ -26,6 +26,7 @@ const ProfileOwner = () => {
     gender: "Pilih Jenis Kelamin",
     email: "",
     photo_profile: "",
+    phone_number:"",
   });
 
   const [formPassword, setFormPassword] = useState<changePassword>({
@@ -45,6 +46,7 @@ const ProfileOwner = () => {
         gender: response.gender,
         email: response.email,
         photo_profile: response.photo_profile,
+        phone_number: response.phone_number,
       });
       if (response.photo_profile) {
         setUploadedImageUrl(response.photo_profile);
@@ -80,6 +82,7 @@ const ProfileOwner = () => {
     const user_name = formData.user_name;
     const gender = formData.gender;
     const email = formData.email;
+    const phone_number = formData.phone_number;
     e.preventDefault();
     const specialCharsRegex = /[^a-zA-Z0-9_]+/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/;
@@ -108,6 +111,7 @@ const ProfileOwner = () => {
         formData.append("user_name", user_name);
         formData.append("gender", gender);
         formData.append("email", email);
+        formData.append("phone", phone_number);
       }
       const response = await updateProfileSync(formData);
       setUploadedImageUrl(response.data.photo_profile);
@@ -313,6 +317,22 @@ const ProfileOwner = () => {
                             />
                           </div>
                         </div>
+                      
+                        <div className="flex gap-5 justify-between mt-5 whitespace-nowrap text-zinc-900 max-md:flex-wrap max-md:max-w-full">
+                        <div className="self-center ">Phone Number</div>
+                        <div className="input-container">
+                        <input
+                        id="phone_number"
+                        onChange={handlePerubahan}
+                        value={formData.phone_number}
+                        required
+                        type="tel" // Use 'tel' type for phone numbers
+                        placeholder="Masukan Nomor Telepon"
+                        className="grow  focus:outline-none w-[45vw] 2xl:w-[18vw] md:w-[22vw] p-4 bg-white rounded border border-solid shadow-sm border-zinc-400 max-md:pr-5"
+                        />
+                        </div>
+                        </div>
+                       
 
                         <div className="flex gap-5 justify-between items-start self-end mt-32 max-w-full w-full max-md:mt-10">
                           <div className="flex-auto md:self-end md:mt-9 md:text-base text-sm text-sky-400 cursor-pointer" onClick={() => setShowPopup(!showPopup)}>

@@ -1,4 +1,5 @@
 export interface profile {
+  phone_number: string;
   name: string;
   user_name: string;
   email: string;
