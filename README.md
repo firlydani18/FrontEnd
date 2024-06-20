@@ -1,28 +1,11 @@
 
-
-
- # KosKita API
-  <h1>Welcome to KosKita</h1>
-
-<!-- PROJECT LOGO -->
-![LOGO](src/asset/koskitaa.png)
-
-## 📑 About the Project
-KosKita adalah aplikasi yang dirancang untuk memudahkan pengguna dalam mencari dan memesan kos. Aplikasi ini menawarkan berbagai fitur yang memudahkan pengguna dalam melakukan transaksi, mulai dari pencarian kos hingga pembayaran
-
-
 ## 🌐 Deployment
  - [NETLIFY](https://koskita.netlify.app/)
 
 ## 🖼 Prototype
 - [FIGMA](https://www.figma.com/file/SLA82Dp0aP8QOWOSRlJqCE/Kost?type=design&node-id=102%3A323&mode=design&t=NVcmjZWyVzodr9FS-1)
 
-## 🤝 Collaboration
-- [Github Repository for the team](https://github.com/Kos-Kita/)
-- [Discord](https://discord.com/)
-
 ### ⚙ Backend
-- [Github Repository for the Backend team](https://github.com/Kos-Kita/KosKita-BE)
 - [Swagger OpenAPI](https://app.swaggerhub.com/apis-docs/L3NONEONE_1/KosKita/1.0.0#/)
 - [Postman Workspace](https://koskita.postman.co/workspace/c8aa6d62-d6b1-489f-8407-086490de72c9)
 
@@ -93,10 +76,3 @@ Follow these steps to install and set up the KosKita API:
 8. 
     ```bash
     npm run dev
-
-## 🤖 Author
-
-- **Alim Prasetyo Putra Sinambela** - FE 17 ALTA
-  - [Github](https://github.com/alimprasetyo77)
-- **Irsan Jamaludin** - FE 17 ALTA
-  - [Github](https://github.com/IrsanJam)
