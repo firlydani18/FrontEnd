@@ -39,11 +39,11 @@
     - Membuat Pembayaran Booking Baru
     - Membatalkan Pembayaran Booking
     - Menerima Notifikasi Pembayaran
-- 💬Real-time Chat
-    - Membuat Ruangan Chat Baru
-    - Mendapatkan Ruangan Chat Yang Dimiliki User
-    - Bergabung Ke Ruangan Chat
-    - Mendapatkan Semua Pesan Di Ruangan Chat 
+- 💬Real-time Chat x
+    - Membuat Ruangan Chat Baru x
+    - Mendapatkan Ruangan Chat Yang Dimiliki User x
+    - Bergabung Ke Ruangan Chat x
+    - Mendapatkan Semua Pesan Di Ruangan Chat x
 - 👮‍♂️Fitur Admin
     - Mendapatkan Total Semua User, Kos, Booking, Dan Total Booking Per Bulan
 
