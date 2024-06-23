@@ -18,11 +18,10 @@ const SearchMenu = () => {
   const itemsPerPage = 5;
   const navigate = useNavigate();
   const [checkboxValues, setCheckboxValues] = useState<checkboxValuesType>({
-    putra: false,
-    putri: false,
+    Deluxe: false,
+    Premium: false,
     hargaDibawah: false,
     hargaDiatas: false,
-    campur: false,
   });
 
   const handleCheckboxChange = (checkboxName: string) => {
@@ -93,19 +92,16 @@ const SearchMenu = () => {
             {showCheckboxes && (
               <div className="checkbox-container flex flex-col ml-3 shadow-md p-3 rounded-md">
                 <label className="font-medium">
-                  <input type="checkbox" checked={checkboxValues.putra} onChange={() => handleCheckboxChange("putra")} /> Putra
+                  <input type="checkbox" checked={checkboxValues.Deluxe} onChange={() => handleCheckboxChange("Deluxe")} /> Deluxe
                 </label>
                 <label className="font-medium">
-                  <input type="checkbox" checked={checkboxValues.putri} onChange={() => handleCheckboxChange("putri")} /> Putri
+                  <input type="checkbox" checked={checkboxValues.Premium} onChange={() => handleCheckboxChange("Premium")} /> Premium
                 </label>
                 <label className="font-medium">
                   <input type="checkbox" checked={checkboxValues.hargaDibawah} onChange={() => handleCheckboxChange("hargaDibawah")} /> Range 0 - 1.000.000
                 </label>
                 <label className="font-medium">
                   <input type="checkbox" checked={checkboxValues.hargaDiatas} onChange={() => handleCheckboxChange("hargaDiatas")} /> Range 1.000.000 - 5.000.000
-                </label>
-                <label className="font-medium">
-                  <input type="checkbox" checked={checkboxValues.campur} onChange={() => handleCheckboxChange("campur")} /> Campur
                 </label>
               </div>
             )}

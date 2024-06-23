@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { IMyKosType } from "@/utils/apis/user/types";
 import { useAuth } from "@/utils/context/auth";
 import NumberFormatter from "@/components/NumberFormatter";
-import logo from "../../assets/koskitaa.png";
+import logo from "../../assets/brand.png";
 import RatingPopup from "@/components/RatingPopup";
 import { cancelBookingSync, cekKostSync, changePasswordSync, deleteProfileSync, getProfileSync, ratingSubmitSync, updateProfileSync } from "@/utils/apis/profile/api";
 import { calculateParsedDates, calculateResultEndDate } from "@/utils/apis/profile/functions";
@@ -32,7 +32,7 @@ const ProfileRenter = () => {
     gender: "Pilih Jenis Kelamin",
     email: "",
     photo_profile: "",
-    phone_number:"",
+    mobile:"",
   });
 
   const [formPassword, setFormPassword] = useState<changePassword>({
@@ -57,7 +57,7 @@ const ProfileRenter = () => {
         gender: response.gender,
         email: response.email,
         photo_profile: response.photo_profile,
-        phone_number: response.phone_number,
+        mobile: response.mobile,
       });
       if (response.photo_profile) {
         setUploadedImageUrl(response.photo_profile);
@@ -93,7 +93,7 @@ const ProfileRenter = () => {
     const user_name = formData.user_name;
     const gender = formData.gender;
     const email = formData.email;
-    const phone_number = formData.phone_number;
+    const mobile = formData.mobile;
     e.preventDefault();
     const specialCharsRegex = /[^a-zA-Z0-9_]+/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/;
@@ -122,7 +122,7 @@ const ProfileRenter = () => {
         formData.append("user_name", user_name);
         formData.append("gender", gender);
         formData.append("email", email);
-        formData.append("phone", phone_number);
+        formData.append("mobile", mobile);
       }
       const response = await updateProfileSync(formData);
       setUploadedImageUrl(response.data.photo_profile);
@@ -359,9 +359,9 @@ const ProfileRenter = () => {
                         <div className="self-center ">Phone Number</div>
                         <div className="input-container">
                         <input
-                        id="phone_number"
+                        id="mobile"
                         onChange={handlePerubahan}
-                        value={formData.phone_number}
+                        value={formData.mobile}
                         required
                         type="tel" // Use 'tel' type for phone numbers
                         placeholder="Masukan Nomor Telepon"
@@ -390,12 +390,12 @@ const ProfileRenter = () => {
                 <div className="flex flex-col grow items-center px-16 md:px-6 py-11 w-full text-sm bg-white rounded shadow-sm text-zinc-900 max-md:px-5 max-md:mt-6 max-md:max-w-full">
                   <div className="flex items-center self-start gap-2 text-lg leading-7 max-md:max-w-full">
                     <img src="https://img.icons8.com/windows/32/smart-home-2.png" alt="home" className="w-[20px]" />
-                    <span>Riwayat Kos</span>
+                    <span>Riwayat Rent</span>
                   </div>
                   {status ? (
                     <div>
-                      <div className="mt-16 text-2xl font-bold leading-9 whitespace-nowrap max-md:mt-10">Kamu belum menyewa kos</div>
-                      <div className="mt-10 leading-6 md:w-[409px] w-full">Yuk, sewa di Koskita untuk aktifkan halaman ini Coba cara ngekos modern dengan unik</div>
+                      <div className="mt-16 text-2xl font-bold leading-9 whitespace-nowrap max-md:mt-10">Kamu belum menyewa Apartement</div>
+                      <div className="mt-10 leading-6 md:w-[409px] w-full">Yuk, sewa di Gold Coast Bahama PIK jakarta untuk aktifkan halaman ini Coba cara Apartement modern dengan unik</div>
                       <div className="flex flex-col justify-start w-full">
                         <div className="flex gap-4 mt-14 whitespace-nowrap leading-[157%] max-md:mt-10">
                           <img loading="lazy" srcSet="https://img.icons8.com/dotty/80/buy-for-coins--v2.png" alt="buy-for-coins--v2" className="aspect-[0.96] w-[52px]" />
@@ -403,7 +403,7 @@ const ProfileRenter = () => {
                         </div>
                         <div className="flex gap-5 mt-4 whitespace-nowrap leading-[171%]">
                           <img loading="lazy" srcSet="https://img.icons8.com/carbon-copy/100/money.png" className="aspect-[0.96] w-[50px]" />
-                          <div className="grow self-start mt-4 md:text-base text-xs">KosKita menjaga keamanan transaksi</div>
+                          <div className="grow self-start mt-4 md:text-base text-xs">Gold Coast Bahama PIK menjaga keamanan transaksi</div>
                         </div>
                         <div className="flex justify-center items-center gap-5 mt-5 whitespace-nowrap leading-[157%]">
                           <img
@@ -442,7 +442,7 @@ const ProfileRenter = () => {
                                         <div>
                                           <div className="flex gap-3 justify-between mt-3.5 text-base whitespace-nowrap">
                                             <div className="grow my-auto text-neutral-900 text-sm">
-                                              Tanggal Kos : {item.start_date} - {`${resultEndDate}`}
+                                              Tanggal Sewa : {item.start_date} - {`${resultEndDate}`}
                                             </div>
                                           </div>
                                           <div className="flex gap-3 justify-between mt-3.5 text-base whitespace-nowrap">

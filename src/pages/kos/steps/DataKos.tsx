@@ -8,14 +8,14 @@ interface DataKosProps {
 }
 
 const DataKos = ({ register, errors }: DataKosProps) => {
-  const categoryKos = ["putra", "putri", "campur"];
+  const categoryKos = ["Deluxe", "Premium"];
 
   return (
     <div className="max-w-6xl  mx-auto flex flex-col gap-y-[40px] p-3">
       <div className="flex flex-col  items-start  gap-x-3">
         <div className="flex w-full">
           <label htmlFor="namaKos" className="w-52 whitespace-nowrap">
-            Nama Kos Anda
+            Nama Apartement Anda
           </label>
           <input
             {...register("kos_name")}
@@ -33,7 +33,7 @@ const DataKos = ({ register, errors }: DataKosProps) => {
       <div className="flex flex-col item-center gap-x-3">
         <div className="flex w-full">
           <label htmlFor="deskripsi" className="w-52 whitespace-nowrap">
-            Deskripsi Kos Anda
+            Deskripsi Apartement Anda
           </label>
           <textarea
             {...register("description")}
@@ -52,7 +52,7 @@ const DataKos = ({ register, errors }: DataKosProps) => {
       <div className="flex flex-col item-center gap-x-3">
         <div className="flex w-full">
           <label htmlFor="kategori" className="w-52 whitespace-nowrap">
-            Kategori Kos Anda
+            Kategori Apartement Anda
           </label>
           <select
             {...register("category")}
@@ -76,7 +76,7 @@ const DataKos = ({ register, errors }: DataKosProps) => {
       <div className="flex flex-col item-center gap-x-3">
         <div className="flex w-full">
           <label htmlFor="peraturan" className="w-52 whitespace-nowrap">
-            Peraturan Kos
+            Peraturan Apartement
           </label>
           <div className="grid grid-cols-4 w-full gap-3">
             {peraturanKos.map((rule) => (
@@ -93,7 +93,7 @@ const DataKos = ({ register, errors }: DataKosProps) => {
       <div className="flex flex-col item-center gap-x-3">
         <div className="flex w-full">
           <label htmlFor="fasilitas" className="w-52 whitespace-nowrap">
-            Fasilitas Kos
+            Fasilitas Apartement
           </label>
           <div className="grid grid-cols-4 w-full gap-3">
             {fasilitasKos.map((fasilitas) => (

@@ -105,7 +105,7 @@ const Dashboard = () => {
                           <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
                             <div className="flex grow gap-5 justify-between items-start px-4 pt-4 pb-12 w-full bg-white rounded-2xl shadow-2xl text-neutral-800 max-md:mt-8">
                               <div className="flex flex-col mt-1.5">
-                                <div className="text-base font-semibold">Total Kos</div>
+                                <div className="text-base font-semibold">Total Apartement</div>
                                 <div className="mt-7 text-3xl font-bold tracking-wider">{dataBook.total_kos}</div>
                               </div>
                               <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f3d2d0b486ef24c6675372f31d801a02ffa86d4205077214587fc13bfbfa7aff?" className="aspect-square w-[60px]" />

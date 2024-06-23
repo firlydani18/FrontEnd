@@ -3,14 +3,18 @@ const MAX_FILE_SIZE = 5000000;
 const ACCEPTED_IMAGE_TYPES = ["image/jpeg", "image/jpg", "image/png"];
 
 export const baseKosSchema = z.object({
-  kos_name: z.string().min(1, { message: "Enter your kos name" }),
+  kos_name: z.string().min(1, { message: "Enter your apartement name" }),
   description: z.string().min(1, { message: "Enter your description" }),
   latitude: z.string().min(1, { message: "Enter your latitude" }),
   longitude: z.string().min(1, { message: "Enter your longitude" }),
-  category: z.string().min(1, { message: "Enter category kos" }),
+  category: z.string().min(1, { message: "Enter category apartement" }),
   price: z.number({ required_error: "Price is required" }),
   rooms: z.number({ required_error: "Rooms is required" }),
   address: z.string({ required_error: "Enter your address" }),
+  traveloka: z.string().min(1, { message: "link is required" }),
+  agoda: z.string().min(1, { message: "link is required" }),
+  hotelcom: z.string().min(1, { message: "link is required" }),
+  tiketcom: z.string().min(1, { message: "link is required" }),
   kos_facilities: z
     .string({ required_error: "Enter facilities" })
     .array()
@@ -123,6 +127,10 @@ export interface IKosRecomend {
   category: string;
   price: number;
   address: string;
+  // traveloka: string;
+  // agoda: string;
+  // hotelcom: string;
+  // tiketcom: string;
   kos_facilities: {
     id: number;
     facility: string;

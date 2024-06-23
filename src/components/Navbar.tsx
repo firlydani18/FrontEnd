@@ -127,7 +127,7 @@ const Navbar = () => {
                     className="p-2 hover:bg-slate-100 cursor-pointer"
                     onClick={() => navigate("/buat-kos")}
                   >
-                    Buat Kos
+                    Buat Apartement
                   </DropdownMenuItem>
                 ) : null}
                 <DropdownMenuSeparator />

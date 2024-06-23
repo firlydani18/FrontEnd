@@ -85,19 +85,19 @@ const EditKos = () => {
       <div className="min-h-screen">
         <form onSubmit={handleSubmit(handleUpdateKos)} className="py-16 space-y-12">
           <div className="bg-white container rounded-sm shadow mx-auto p-6 space-y-8">
-            <h1 className="text-2xl px-8 tracking-wide">Data Kos</h1>
+            <h1 className="text-2xl px-8 tracking-wide">Data Apartement</h1>
             <DataKos errors={errors} register={register} />
           </div>
           <div className="bg-white container rounded-sm shadow mx-auto p-6 space-y-8">
-            <h1 className="text-2xl px-8 tracking-wide">Foto Kos</h1>
+            <h1 className="text-2xl px-8 tracking-wide">Foto Apartement</h1>
             <FotoKos errors={errors} register={register} dataKos={dataKos} />
           </div>
           <div className="bg-white container rounded-sm shadow mx-auto p-6 space-y-8">
-            <h1 className="text-2xl px-8 tracking-wide">Alamat Kos</h1>
+            <h1 className="text-2xl px-8 tracking-wide">Alamat Apartement</h1>
             <AlamatKos errors={errors} register={register} setValue={setValue} />
           </div>
           <div className="bg-white container rounded-sm shadow mx-auto py-6 -space-y-6">
-            <h1 className="text-2xl px-8 tracking-wide">Harga Kos</h1>
+            <h1 className="text-2xl px-8 tracking-wide">Harga Apartement</h1>
             <HargaKos errors={errors} register={register} />
           </div>
           <div className="w-full flex items-center justify-end  container">

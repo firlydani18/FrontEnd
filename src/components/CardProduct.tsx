@@ -7,7 +7,7 @@ import { Separator } from "@radix-ui/react-dropdown-menu";
 import { toast } from "./ui/use-toast";
 import { deleteKos } from "@/utils/apis/kos/api";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/koskitaa.png";
+import logo from "../assets/brand.png";
 
 export interface searchKos {
   hidden: boolean;

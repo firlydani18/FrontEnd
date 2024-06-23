@@ -7,9 +7,8 @@ export const buildQueryParams = (searchQuery: string, state: any, checkboxValues
   }
 
   const categories = [];
-  if (checkboxValues.putra) categories.push("putra");
-  if (checkboxValues.putri) categories.push("putri");
-  if (checkboxValues.campur) categories.push("campur");
+  if (checkboxValues.Deluxe) categories.push("Deluxe");
+  if (checkboxValues.Premium) categories.push("Premium");
   if (categories.length > 0) {
     queryParams.set("category", categories.join(","));
   }

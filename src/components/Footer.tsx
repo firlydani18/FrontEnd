@@ -26,7 +26,7 @@ const Footer = () => {
                 />
               </div>
               <div className="mt-3 text-base whitespace-nowrap text-neutral-900">
-                © 2024 Kos Kita
+                © 2024 Gold Coast Bahama PIK Jakarta
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col ml-5 w-[24%] max-md:ml-0 max-md:w-full">
                   <div className="flex flex-col grow text-lg leading-6 whitespace-nowrap text-neutral-900 max-md:mt-10">
-                    <div className="font-bold">Penyewa</div>
+                    <div className="font-bold">Admin</div>
                     <div className="mt-4">Blog</div>
                     <div className="mt-4">FAQ</div>
                     <div className="mt-4">Karir</div>

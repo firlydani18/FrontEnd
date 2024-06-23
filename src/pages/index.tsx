@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import imageBackround from "@/assets/image-home.png";
+import imageBackround from "@/assets/image-home.jpeg";
 import { MapPin, Search, Star } from "lucide-react";
 import carbonClean from "@/assets/carbon_clean.png";
 import tag from "@/assets/tag.png";
@@ -12,11 +12,10 @@ import React, { useEffect, useState } from "react";
 import { IKosRecomend } from "@/utils/apis/kos/types";
 import { toast } from "@/components/ui/use-toast";
 import Homepage from "@/components/skeletons/Homepage";
-import jakartaBarat from "@/assets/jakarta1.png";
-import jakartaUtara from "@/assets/jakarta2.png";
-import jakartaPusat from "@/assets/jakarta3.png";
-import jakartaTimur from "@/assets/jakarta4.png";
-import jakartaSelatan from "@/assets/jakarta5.png";
+import DeluxeStudioSeaView from "@/assets/DeluxeStudioSeaView.jpg";
+import PremiumStudioSeaView from "@/assets/PremiumStudioSeaView.jpg";
+import PremiumOneBedroomSeaView from "@/assets/PremiumOneBedroomSeaView.jpg";
+import PremiumTwoBedroomCityView from "@/assets/PremiumTwoBedroomCityView.jpg";
 import NumberFormatter from "@/components/NumberFormatter";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -62,7 +61,7 @@ const App = () => {
             onSubmit={handleSearch}
             className="bg-white/85 shadow rounded-tr-3xl rounded-tl-3xl rounded-br-3xl rounded absolute top-48 left-20 p-8 space-y-10 max-w-lg w-full "
           >
-            <h1 className="text-4xl font-semibold">Anda Cari Kost?</h1>
+            <h1 className="text-4xl font-semibold">Anda Cari Apartement?</h1>
             <p className="text-lg font-medium text-[#181A18]">Cari disini aja dah</p>
             <label
               htmlFor="search"
@@ -81,20 +80,18 @@ const App = () => {
         </section>
 
         <section className="flex flex-col gap-y-3 items-center justify-center py-20">
-          <h1 className="text-4xl font-medium">Pilihan Lokasi</h1>
+          <h1 className="text-4xl font-medium">Pilihan Kamar</h1>
           <div className="grid grid-cols-5 gap-x-16 pt-10">
             {Array.from({ length: 5 }, (_, index) => (
               <div className="flex flex-col items-center gap-y-3" key={index}>
                 <span className="font-medium">
                   {index === 0
-                    ? "Jakarta Barat"
-                    : index === 1
-                    ? "Jakarta Utara"
-                    : index === 2
-                    ? "Jakarta Pusat"
-                    : index === 3
-                    ? "Jakarta Timur"
-                    : "Jakarta Selatan"}
+                     ? "Deluxe Studio Sea View"
+                     : index === 1
+                     ? "Premium Studio Sea View"
+                     : index === 2
+                     ? "Premium One Bedroom Sea View"
+                     : "Premium Two Bedroom City View"}
                 </span>
                 <img
                   onClick={() =>
@@ -102,27 +99,23 @@ const App = () => {
                       state: {
                         data:
                           index === 0
-                            ? "Jakarta Barat"
-                            : index === 1
-                            ? "Jakarta Utara"
-                            : index === 2
-                            ? "Jakarta Pusat"
-                            : index === 3
-                            ? "Jakarta Timur"
-                            : "Jakarta Selatan",
+                          ? "Deluxe Studio Sea View"
+                          : index === 1
+                          ? "Premium Studio Sea View"
+                          : index === 2
+                          ? "Premium One Bedroom Sea View"
+                          : "Premium Two Bedroom City View"
                       },
                     })
                   }
                   src={
                     index === 0
-                      ? jakartaBarat
-                      : index === 1
-                      ? jakartaUtara
-                      : index === 2
-                      ? jakartaPusat
-                      : index === 3
-                      ? jakartaTimur
-                      : jakartaSelatan
+                    ? DeluxeStudioSeaView
+                    : index === 1
+                    ? PremiumStudioSeaView
+                    : index === 2
+                    ? PremiumOneBedroomSeaView
+                    : PremiumTwoBedroomCityView
                   }
                   alt="jakarta"
                   className="rounded-[30px] cursor-pointer"
@@ -133,7 +126,7 @@ const App = () => {
         </section>
 
         <section className="flex flex-col gap-y-[60px] items-center justify-center py-20 ">
-          <h1 className="text-4xl font-medium">Rekomendasi Kos</h1>
+          <h1 className="text-4xl font-medium">Rekomendasi Apartement</h1>
           <Carousel
             className="p-5"
             plugins={[plugin.current]}
@@ -207,11 +200,11 @@ const App = () => {
         <section className="flex flex-col gap-y-3 items-center justify-center py-20">
           <div className="container flex flex-col gap-y-12 items-center justify-center">
             <div className="gap-y-5 flex flex-col items-center">
-              <h1 className="text-4xl font-medium text-[#181A18]">Alasan Kenapa KosKita !!!</h1>
+              <h1 className="text-4xl font-medium text-[#181A18]">Alasan Kenapa Gold Coast Bahama PIK !!!</h1>
               <p className="text-sm text-center max-w-4xl leading-relaxed tracking-wide">
-                Koskita adalah platform inovatif yang dirancang khusus untuk memudahkan pencarian
-                dan penyewaan kos bagi semua kalangan. Dengan antarmuka yang ramah pengguna dan
-                fitur canggih, Koskita membantu Anda menemukan tempat tinggal yang sempurna sesuai
+              Gold Coast Bahama PIK adalah platform inovatif yang dirancang khusus untuk memudahkan pencarian
+                dan penyewaan apartement bagi semua kalangan. Dengan antarmuka yang ramah pengguna dan
+                fitur canggih, Gold Coast Bahama PIK membantu Anda menemukan tempat tinggal yang sempurna sesuai
                 dengan kebutuhan dan preferensi Anda.
               </p>
             </div>
@@ -236,12 +229,12 @@ const App = () => {
                   </h3>
                   <p className="text-sm">
                     {index === 0
-                      ? "Kos nya udah termaintained, jadi kebersihan nya gak perlu diragukan lagi"
+                      ? "Apartement nya udah termaintained, jadi kebersihan nya gak perlu diragukan lagi"
                       : index === 1
-                      ? "Kos yang di tawarkan koskita harga nya bersahabat kok."
+                      ? "Apartement yang di tawarkan Gold Coast Bahama PIK Jakarta harga nya bersahabat kok."
                       : index === 2
-                      ? "Wifi yang disediakan sudah mempunyai High-speed wifi, tergantung ketersediaan kos nya."
-                      : "Tenang, Owner kos bisa di hubungi 24 jam."}
+                      ? "Wifi yang disediakan sudah mempunyai High-speed wifi."
+                      : "Tenang, Admin Gold Coast Bahama PIK bisa di hubungi 24 jam."}
                   </p>
                 </div>
               ))}

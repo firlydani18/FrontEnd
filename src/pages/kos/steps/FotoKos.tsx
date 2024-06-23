@@ -30,7 +30,7 @@ const FotoKos = ({ register, errors, dataKos }: FotoKosProps) => {
   return (
     <div className="max-w-6xl mx-auto flex flex-col gap-y-[40px] p-3 ">
       <div className="flex items-center gap-x-16 ">
-        <span className="w-40">Foto Kos Utama Anda</span>
+        <span className="w-40">Foto Apartement Utama Anda</span>
         <label
           htmlFor="fotoUtama"
           className="bg-slate-100 rounded-2xl max-w-sm w-full cursor-pointer p-5 h-full flex items-center justify-center overflow-hidden"
@@ -63,7 +63,7 @@ const FotoKos = ({ register, errors, dataKos }: FotoKosProps) => {
         />
       </div>
       <div className="flex items-center gap-x-16 ">
-        <span className="w-40">Foto Kos Depan Anda</span>
+        <span className="w-40">Foto Apartement Depan Anda</span>
         <label
           htmlFor="fotoDepan"
           className="bg-slate-100 rounded-2xl max-w-sm w-full cursor-pointer p-5 h-full flex items-center justify-center"
@@ -96,7 +96,7 @@ const FotoKos = ({ register, errors, dataKos }: FotoKosProps) => {
         />
       </div>
       <div className="flex items-center gap-x-16 ">
-        <span className="w-40">Foto Kos Belakang Anda</span>
+        <span className="w-40">Foto Apartement Belakang Anda</span>
         <label
           htmlFor="fotoBelakang"
           className="bg-slate-100 rounded-2xl max-w-sm w-full cursor-pointer p-5 h-full flex items-center justify-center"

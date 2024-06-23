@@ -15,8 +15,8 @@ const ContactPage: React.FC = () => {
               <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
                 <img width="30" height="30" src="https://img.icons8.com/carbon-copy/100/link-company-parent.png" alt="link-company-parent" /> Kantor Pusat
               </h2>
-              <p className="text-gray-700 mb-2">Jl. Kapt Piere Tendean</p>
-              <p className="text-gray-700 mb-2">Kota Jakarta Selatan</p>
+              <p className="text-gray-700 mb-2">Jl. Pantai Indah Kapuk, RT.8/RW.2, Kamal Muara, Kec. Penjaringan</p>
+              <p className="text-gray-700 mb-2">Kota Jakarta utara</p>
               <p className="text-gray-700 mb-2">12790</p>
               <p className="text-gray-700 mb-2">Indonesia</p>
             </div>
@@ -25,15 +25,15 @@ const ContactPage: React.FC = () => {
               <p className="text-gray-700 mb-2 flex items-center gap-3">
                 <img width="20" height="20" src="https://img.icons8.com/ios/50/phone--v1.png" alt="phone--v1" />
                 Nomor Telepon:{" "}
-                <a href="tel:081234567890" className="text-lime-600 font-medium">
-                  081234567890
+                <a href="tel:081280628300" className="text-lime-600 font-medium">
+                081280628300
                 </a>
               </p>
               <p className="text-gray-700 mb-2 flex items-center gap-3">
                 <img width="20" height="20" src="https://img.icons8.com/ios/50/mail.png" alt="mail" />
                 Email:{" "}
-                <a href="mailto:info@koskita.com" className="text-lime-600 font-medium">
-                  info@koskita.com
+                <a href="mailto:GCAPIKSERVICEDAPARTMENTS@GMAIL.COM" className="text-lime-600 font-medium">
+                GCAPIKSERVICEDAPARTMENTS@GMAIL.COM
                 </a>
               </p>
             </div>
@@ -55,7 +55,7 @@ const ContactPage: React.FC = () => {
       </div>
       <footer className="bg-lime-600 relative bottom-0 w-full text-white py-4">
         <div className="container mx-auto text-center">
-          <p>Hak Cipta © {new Date().getFullYear()} KosKita. All rights reserved.</p>
+          <p>Hak Cipta © {new Date().getFullYear()} Gold Coast Bahama PIK Jakarta. All rights reserved.</p>
         </div>
       </footer>
     </div>

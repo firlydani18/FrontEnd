@@ -125,7 +125,7 @@ const DetailKos = () => {
         } else {
           // console.log("Create Room");
           const res: AxiosResponse<Response<{ room_id: string }>> = await axios.post(
-            `${import.meta.env.VITE_BASE_URL}/create-room`,
+            `${import.meta.env.VITE_BASE_URL}/buat-kos`,
             {
               receiver_id: data?.user.id,
               sender_id: user.id,
@@ -216,7 +216,7 @@ const DetailKos = () => {
                   className="rounded-full size-16"
                 />
                 <div className="flex flex-col gap-y-2">
-                  <span className="font-medium">Pemilik Kos</span>
+                  <span className="font-medium">Admin Apartement</span>
                   <span className="text-sm">{data?.user.name} </span>
                 </div>
               </div>
@@ -256,20 +256,48 @@ const DetailKos = () => {
                   <NumberFormatter value={data?.price as number} />
                   <span className="font-normal ml-px text-black/80">/bulan</span>
                 </span>
+                <p className="text-center text-sm">
+                  Berikut Pilihan Pemesanan dengan Berbagai Platform :
+                </p>
                 <button
-                  className="px-5 py-2 rounded-xl text-sm text-white bg-[#4CA02E] "
+                  className="px-3 py-1 rounded-xl text-sm text-white bg-[#4CA02E] "
                   onClick={handleSubmit}
                 >
-                  Lanjutkan pemesanan
+                Website
                 </button>
                 <button
-                  className="px-5 py-2 rounded-xl text-sm text-white bg-[#4CA02E]"
+                  className="px-3 py-1 rounded-xl text-sm text-white bg-[#4CA02E]"
+                  onClick={handleSubmit}
+                >
+                Traveloka
+                </button>
+                <button
+                  className="px-3 py-1 rounded-xl text-sm text-white bg-[#4CA02E]"
+                  onClick={handleSubmit}
+                >
+                Agoda
+                </button>
+                <button
+                  className="px-3 py-1 rounded-xl text-sm text-white bg-[#4CA02E]"
+                  onClick={handleSubmit}
+                >
+                Hotel.com
+                </button>
+                <button
+                  className="px-3 py-1 rounded-xl text-sm text-white bg-[#4CA02E]"
+                  onClick={handleSubmit}
+                >
+                tiket.com
+                </button>
+
+                <button
+                  className="px-3 py-1 rounded-xl text-sm text-white bg-[#4CA02E]"
                   onClick={() => joinRoom()}
                 >
-                  Kontak Pemilik Kos
+                  Kontak Admin Apartement
                 </button>
                 <p className="text-center text-sm">
-                  Ketika Anda memesan kos ini, Lanjutkan Chat Tukang Kos nya dan akan dikonfirmasi
+                  Ketika Anda memesan apartemen ini, Lanjutkan Chat Admin dan akan dikonfirmasi
                   secara instan
                 </p>
               </div>
@@ -292,14 +320,14 @@ const DetailKos = () => {
                 />
 
                 <Marker position={position} ref={markerRef} icon={icon}>
-                  <Popup>Lokasi Kos</Popup>
+                  <Popup>Lokasi Apartement</Popup>
                 </Marker>
               </MapContainer>
             ) : null}
           </div>
         </section>
         <section className="py-20 space-y-14">
-          <h3 className="text-center text-4xl font-semibold">Fasilitas Kos</h3>
+          <h3 className="text-center text-4xl font-semibold">Fasilitas Apartement</h3>
           <div className="container 2xl:max-w-[95rem] mx-auto">
             <div className="grid grid-cols-3 gap-6 place-items-center">
               {data?.kos_facilities?.map((item) => (
@@ -331,7 +359,7 @@ const DetailKos = () => {
           </div>
         </section>
         <section className="py-20 space-y-14 ">
-          <h3 className="text-center text-4xl font-semibold">Peraturan Kos</h3>
+          <h3 className="text-center text-4xl font-semibold">Peraturan Apartement</h3>
           <div className="grid grid-cols-3 gap-3 place-items-center container 2xl:max-w-[100rem]">
             {data?.kos_rules?.map((item) => (
               <div className="flex items-center gap-x-5 w-56" key={item.id}>

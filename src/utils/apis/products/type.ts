@@ -1,7 +1,6 @@
 export interface checkboxValuesType {
-  putra: boolean;
-  putri: boolean;
-  campur: boolean;
+  Deluxe: boolean;
+  Premium: boolean;
   hargaDibawah: boolean;
   hargaDiatas: boolean;
 }

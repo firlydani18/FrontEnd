@@ -26,7 +26,7 @@ const HargaKos = ({ register, errors }: HargaKosProps) => {
       </div>
       <div className="flex item-center gap-x-3">
         <label htmlFor="JumlahKos" className="w-52 whitespace-nowrap">
-          Jumlah Ruangan Kos
+          Jumlah Ruangan Apartement
         </label>
         <div className="flex flex-col gap-y-3 w-full">
           <input

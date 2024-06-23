@@ -26,7 +26,7 @@ const ProfileOwner = () => {
     gender: "Pilih Jenis Kelamin",
     email: "",
     photo_profile: "",
-    phone_number:"",
+    mobile:"",
   });
 
   const [formPassword, setFormPassword] = useState<changePassword>({
@@ -46,7 +46,7 @@ const ProfileOwner = () => {
         gender: response.gender,
         email: response.email,
         photo_profile: response.photo_profile,
-        phone_number: response.phone_number,
+        mobile: response.mobile,
       });
       if (response.photo_profile) {
         setUploadedImageUrl(response.photo_profile);
@@ -82,7 +82,7 @@ const ProfileOwner = () => {
     const user_name = formData.user_name;
     const gender = formData.gender;
     const email = formData.email;
-    const phone_number = formData.phone_number;
+    const mobile = formData.mobile;
     e.preventDefault();
     const specialCharsRegex = /[^a-zA-Z0-9_]+/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/;
@@ -111,7 +111,7 @@ const ProfileOwner = () => {
         formData.append("user_name", user_name);
         formData.append("gender", gender);
         formData.append("email", email);
-        formData.append("phone", phone_number);
+        formData.append("mobile", mobile);
       }
       const response = await updateProfileSync(formData);
       setUploadedImageUrl(response.data.photo_profile);
@@ -322,9 +322,9 @@ const ProfileOwner = () => {
                         <div className="self-center ">Phone Number</div>
                         <div className="input-container">
                         <input
-                        id="phone_number"
+                        id="mobile"
                         onChange={handlePerubahan}
-                        value={formData.phone_number}
+                        value={formData.mobile}
                         required
                         type="tel" // Use 'tel' type for phone numbers
                         placeholder="Masukan Nomor Telepon"
@@ -377,11 +377,11 @@ const ProfileOwner = () => {
                         <div className="flex flex-col grow items-center px-16 py-11 w-full text-sm bg-white rounded shadow-sm text-zinc-900 max-md:px-5 max-md:mt-6 max-md:max-w-full">
                           <div className="flex items-center self-start gap-2 text-lg leading-7 max-md:max-w-full">
                             <img src="https://img.icons8.com/windows/32/smart-home-2.png" alt="home" className="w-[20px]" />
-                            <span>Riwayat Kos</span>
+                            <span>Riwayat Apartement</span>
                           </div>
                           <div className="w-full">
-                            <div className="mt-16 md:text-2xl text-lg font-bold leading-9 whitespace-nowrap max-md:mt-10">Kamu belum posting kos kosan kamu</div>
-                            <div className="mt-10 leading-6 md:w-[409px] w-full">Kamu mempunyai kos-kosan? Yuk posting kos-kosan mu dan sewa kos-kosan mu di KosKita.</div>
+                            <div className="mt-16 md:text-2xl text-lg font-bold leading-9 whitespace-nowrap max-md:mt-10">Kamu belum posting apartement kamu</div>
+                            <div className="mt-10 leading-6 md:w-[409px] w-full">Kamu mempunyai apartement? Yuk posting apartement mu dan sewa apartement mu di Gold Coast Bahama PIK Jakarta.</div>
 
                             <div className="flex flex-col justify-start w-full">
                               <div className="flex gap-4 mt-14 whitespace-nowrap leading-[157%] max-md:mt-10">
@@ -390,7 +390,7 @@ const ProfileOwner = () => {
                               </div>
                               <div className="flex gap-5 mt-4 whitespace-nowrap leading-[171%]">
                                 <img loading="lazy" srcSet="https://img.icons8.com/carbon-copy/100/money.png" className="aspect-[0.96] w-[50px]" />
-                                <div className="grow self-start mt-4 md:text-base text-xs">KosKita menjaga keamanan transaksi</div>
+                                <div className="grow self-start mt-4 md:text-base text-xs">Gold Coast Bahama PIK menjaga keamanan transaksi</div>
                               </div>
                               <div className="flex justify-center items-center gap-5 mt-5 whitespace-nowrap leading-[157%]">
                                 <img

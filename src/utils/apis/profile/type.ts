@@ -1,5 +1,5 @@
 export interface profile {
-  phone_number: string;
+  mobile: string;
   name: string;
   user_name: string;
   email: string;

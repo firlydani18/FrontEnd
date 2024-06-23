@@ -7,6 +7,7 @@ import DataKos from "./steps/DataKos";
 import FotoKos from "./steps/FotoKos";
 import AlamatKos from "./steps/AlamatKos";
 import HargaKos from "./steps/HargaKos";
+import Linkkos from "./steps/Linkkos";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { IKosType, kosSchema } from "@/utils/apis/kos/types";
@@ -15,7 +16,7 @@ import { createKos } from "@/utils/apis/kos/api";
 import { Loader2 } from "lucide-react";
 
 const AddKos = () => {
-  const steps = ["Data Kos", "Foto Kos", "Alamat Kos", "Harga Kos"];
+  const steps = ["Data Apartement", "Foto Apartement", "Alamat Apartement", "Harga Apartement", "Link Apartement"];
   const [searchParam, setSearchParam] = useSearchParams();
   const stepTab = searchParam.get("step");
   const navigate = useNavigate();
@@ -44,6 +45,10 @@ const AddKos = () => {
       longitude: "",
       price: 0,
       rooms: 0,
+      traveloka:"",
+      agoda:"",
+      tiketcom:"",
+      hotelcom:"",
     },
     mode: "onChange",
   });
@@ -76,7 +81,7 @@ const AddKos = () => {
   };
 
   const handleNextStep = async () => {
-    if (Number(stepTab) === 4) return;
+    if (Number(stepTab) === 5) return;
 
     searchParam.set("step", `${Number(stepTab) + 1}`);
     setSearchParam(searchParam);
@@ -101,9 +106,12 @@ const AddKos = () => {
             <AlamatKos register={register} setValue={setValue} errors={errors!} />
           ) : stepTab === "4" ? (
             <HargaKos register={register} errors={errors!} />
+          ) : stepTab === "5" ? (
+            <Linkkos register={register} errors={errors!} />
           ) : null}
+          
           <div className="w-full flex items-center justify-end px-24 ">
-            {Number(stepTab) < 4 && (
+            {Number(stepTab) < 5 && (
               <button
                 className="bg-[#4CA02E] text-white py-2 px-3 text-sm rounded-md "
                 onClick={() => handleNextStep()}
@@ -112,7 +120,7 @@ const AddKos = () => {
                 Continue
               </button>
             )}
-            {Number(stepTab) === 4 && (
+            {Number(stepTab) === 5 && (
               <button
                 className="bg-[#4CA02E] text-white py-2 px-3 text-sm rounded-md flex items-center justify-center disabled:cursor-wait"
                 disabled={isSubmitting}
